@@ -4,19 +4,19 @@
   <div padding>
   <ion-segment [(ngModel)]="tabs">
     <ion-segment-button value="health">
-      MyHealth
+      My Health
     </ion-segment-button>
     <ion-segment-button value="messages">
-      MyMessages
+      My Messages
     </ion-segment-button>
     <ion-segment-button value="appointments">
-      MyAppointments
+      My Appointments
     </ion-segment-button>
     <ion-segment-button value="profile">
-      MyProfile
+      My Profile
     </ion-segment-button>
     <ion-segment-button value="bills">
-      MyBills
+      My Bills
     </ion-segment-button>
   </ion-segment>
   </div>
@@ -28,7 +28,7 @@
   <ion-list *ngSwitchCase="'health'">
     <ion-item>
       <ion-thumbnail item-start>
-        <img src="img/thumbnail-totoro.png">
+        <img src="../development/atlas/Portal.Web/Styles/img/navbar/dashboard.png">
       </ion-thumbnail>
       <h2>Summary</h2>
       <button ion-button clear item-end (click)="goToOtherPage('summary')">View</button>

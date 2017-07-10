@@ -19,9 +19,6 @@ import { InsurancePage } from '../profile/insurance/insurance';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  
-  tab1: any;
-  tab2: any;
 
   constructor(public navCtrl: NavController) {
 

@@ -6,9 +6,6 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'visit.html'
 })
 export class VisitPage {
-  rootPage:any = VisitPage;
-  tab1: any;
-  tab2: any;
 
   constructor(public navCtrl: NavController) {
 
