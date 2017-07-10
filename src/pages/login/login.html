@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title color="secondary">
+            MyHealthRecord
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item inset>
+        <ion-label color="light" floating>Username</ion-label>
+            <ion-input type="text" style="color: white;" [(ngModel)] = "username" required></ion-input>
+    </ion-item>
+                <button ion-button style="font-size: 9px !important; height: 9px !important;" color="light"  clear>Forgot Username?</button>
+
+    <ion-item inset>
+        <ion-label color="light" floating>Password</ion-label>
+            <ion-input type="password" style="color: white;" required></ion-input>
+                </ion-item>
+             <button ion-button style="font-size: 9px !important; height: 9px !important;" color="light"  clear>Forgot Password?</button>
+                <br>
+                <br>
+                <button color="primary" [navPush]="pushPage" ion-button block>Login</button>
+                <br>
+                <p style="font-weight:bold;font-size:20px; color: white; text-align: center;">Powered by Greenway Health</p>
+                <img align="middle" src="assets/img/logo.png" style="height: 80px; width:350px;">
+</ion-content>
+<label>{{ username }}</label>
+<ion-footer>
+    <ion-toolbar color="secondary">
+        <p>© 2017 Greenway Health, LLC. All rights reserved. | v1.0.0.0
+            <br>
+            <button ion-button style="font-size: 9px !important; height: 9px !important;" color="light"  clear>Terms of Service</button> |
+                <button ion-button style="font-size: 9px !important; height: 9px !important;" color="light"  clear>Privacy Policy</button>
+    </ion-toolbar>
+</ion-footer>
