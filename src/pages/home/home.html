@@ -1,14 +1,115 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="secondary">
+
+  <div padding>
+  <ion-segment [(ngModel)]="tabs">
+    <ion-segment-button value="health">
+      MyHealth
+    </ion-segment-button>
+    <ion-segment-button value="messages">
+      MyMessages
+    </ion-segment-button>
+    <ion-segment-button value="appointments">
+      MyAppointments
+    </ion-segment-button>
+    <ion-segment-button value="profile">
+      MyProfile
+    </ion-segment-button>
+    <ion-segment-button value="bills">
+      MyBills
+    </ion-segment-button>
+  </ion-segment>
+  </div>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <div [ngSwitch]="tabs">
+  <ion-list *ngSwitchCase="'health'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Summary</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('summary')">View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Visits</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('visit')">View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Medications</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('medication')">View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Health History Forms</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('historyForm')">View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Documents and Forms</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('document')">View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Access Log</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('accessLog')">View</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'messages'">
+
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'appointments'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Scheduled</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('scheduled')">View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Request</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('request')">View</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'profile'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>My Information</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('information')">View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>My Insurance</h2>
+      <button ion-button clear item-end (click)="goToOtherPage('insurance')">View</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'bills'">
+
+  </ion-list>
+  </div>
 </ion-content>
